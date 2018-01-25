@@ -16,10 +16,7 @@ def get_prediction():
   data = resp.json()
 
   # Print the prediction
-  if data.get('ok'):
-    print('Got Prediction: ', data.get('prediction'))
-  else:
-    print('Prediction responded with error: ', data.get('error'))
+  print('Got Prediction: ', data.get('prediction'))
 
 
 if __name__ == '__main__':

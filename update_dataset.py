@@ -23,10 +23,8 @@ def update_dataset():
   data = resp.json()
 
   # Print the response
-  if data.get('ok'):
+  if not data.get('update_error'):
     print('Dataset successfully updated.')
-  else:
-    print('Dataset update failed with error: ', data.get('error'))
 
 
 if __name__ == '__main__':

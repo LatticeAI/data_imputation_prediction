@@ -16,7 +16,7 @@ def get_prediction():
   data = resp.json()
 
   # Print the prediction
-  print('Got Prediction: ', data.get('prediction'))
+  print('Got Prediction:  {}'.format(data.get('prediction')))
 
 
 if __name__ == '__main__':

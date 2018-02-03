@@ -1,4 +1,4 @@
-from tensorci import TensorCI
+from tensorci_client import TensorCI
 
 client = TensorCI()
 

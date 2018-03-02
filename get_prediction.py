@@ -2,16 +2,11 @@ from tensorci_client import TensorCI
 
 client = TensorCI()
 
-unseen_features = {
-  'name': 'Gary',
-  'email': 'gary@gmail.com'
+incomplete_record = {
+  'AGE': 40,
+  'CLASS': 'BUSINESS'
 }
 
-# Make the prediction
-resp = client.predict(features=unseen_features)
-
-# Parse the prediction
-data = resp.json()
-
-# Print the prediction
-print('Got Prediction:  {}'.format(data.get('prediction')))
+for i in range(20):
+  complete_record = client.predict(data=incomplete_record)
+  print('Got prediction {}'.format(i + 1))
